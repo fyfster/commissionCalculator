@@ -15,3 +15,7 @@ services:
                 - '@App\Service\Rule\DepositRule'
                 - '@App\Service\Rule\BusinessWithdrawRule'
                 - '@App\Service\Rule\PrivateWithdrawRule'
+
+    App\Service\Currency\ExchangeRateService:
+        arguments:
+            $apiKey: '%env(EXCHANGE_API_KEY)%'
